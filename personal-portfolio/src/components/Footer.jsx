@@ -41,7 +41,7 @@ const Footer = () => {
 
         {/* Social Icons */}
         <div className="flex gap-6 text-2xl justify-center">
-          <a href="https://linkedin.com/in/sukanthan" target="_blank" rel="noopener noreferrer">
+          <a href="www.linkedin.com/in/sukanthan-elangovan" target="_blank" rel="noopener noreferrer">
             <FaLinkedin className="hover:text-cyan-400 transition duration-300" />
           </a>
           <a href="https://github.com/sukanthan08" target="_blank" rel="noopener noreferrer">
