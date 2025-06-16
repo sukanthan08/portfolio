@@ -53,7 +53,7 @@ const Footer = () => {
           <a href="https://www.hackerrank.com/profile/sukanthancse2020" target="_blank" rel="noopener noreferrer">
             <FaHackerrank className="hover:text-green-400 transition duration-300" />
           </a>
-          <a href="https://open.spotify.com/show/MrXPodcast" target="_blank" rel="noopener noreferrer">
+          <a href="https://open.spotify.com/show/5od5VCHFREuUOApVcsZsjW?si=_o2YE3C9R2WHhgGthq14qA" target="_blank" rel="noopener noreferrer">
             <FaSpotify className="hover:text-green-500 transition duration-300" />
           </a>
         </div>

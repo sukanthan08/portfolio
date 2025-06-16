@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+   "homepage": "https://sukanthan.github.io/your-portfolio",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -32,4 +33,6 @@
     "tailwindcss": "^4.1.10",
     "vite": "^6.3.5"
   }
+ 
+
 }

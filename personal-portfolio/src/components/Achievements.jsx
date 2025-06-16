@@ -15,10 +15,10 @@ const achievements = [
     icon: <SiFreecodecamp className="text-green-300 text-3xl" />,
     link: "https://www.freecodecamp.org/certification/fcca31b0ac7-3eb7-4ff0-a23f-a4dbbfc2d12a/responsive-web-design",
   },
- {
-  title: "PwC Data Analytics Job Simulation",
-  icon: <FaBuilding className="text-orange-300 text-3xl" />,
-  link: "https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/PwC%20Switzerland/a87GpgE6tiku7q3gu_PwC%20Switzerland_H5HuKJozJd5Xrc52m_1726317742229_completion_certificate.pdf",
+  {
+    title: "PwC Data Analytics Job Simulation",
+    icon: <FaBuilding className="text-orange-300 text-3xl" />,
+    link: "https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/PwC%20Switzerland/a87GpgE6tiku7q3gu_PwC%20Switzerland_H5HuKJozJd5Xrc52m_1726317742229_completion_certificate.pdf",
   },
   {
     title: "Accenture North America Job Simulation",
@@ -68,8 +68,8 @@ export default function Achievements() {
 
         {/* Certificate Modal */}
         {selected && (
-          <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-70 flex items-center justify-center z-50">
-            <div className="bg-white text-black rounded-lg p-6 w-[90%] max-w-xl relative shadow-2xl">
+          <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-70 flex items-center justify-center z-50 px-4">
+            <div className="bg-white text-black rounded-lg p-6 w-full max-w-xl relative shadow-2xl">
               <button
                 onClick={() => setSelected(null)}
                 className="absolute top-2 right-3 text-xl font-bold text-red-500 hover:text-red-700"
@@ -77,11 +77,29 @@ export default function Achievements() {
                 ×
               </button>
               <h3 className="text-2xl font-semibold mb-4">{selected.title}</h3>
-              <iframe
-                src={selected.link}
-                className="w-full h-[400px] border rounded-md"
-                title="Certificate Preview"
-              ></iframe>
+
+              <div className="w-full h-[400px] border rounded-md">
+                <object
+                  data={selected.link}
+                  type="application/pdf"
+                  className="w-full h-full rounded"
+                >
+                  <div className="text-center mt-4">
+                    <p className="text-sm text-gray-600">
+                      📱 PDF preview not supported on this device.
+                    </p>
+                    <a
+                      href={selected.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-block mt-2 bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg transition duration-300"
+                    >
+                      🔗 Tap to View Certificate
+                    </a>
+                  </div>
+                </object>
+              </div>
+
               <div className="mt-4 text-right">
                 <a
                   href={selected.link}
